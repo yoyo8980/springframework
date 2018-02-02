@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>test table list</h1>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>name</th>
+		</tr>
+			
+		<tr th:each="bean : ${list}">
+			<td><a href="#" th:href="@{/guest/__${bean.id}__}" th:text="${bean.id}"></a></td>
+			<td><a href="#" th:href="@{/guest/__${bean.id}__}" th:text="${bean.name}"></a></td>
+		</tr>
+	</table>
+</body>
+</html>
